@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import Navbar from './components/Navbar'
 import Store from './components/Store'
+import Skateboard from './components/Skateboard'
 
 
 function App() {
@@ -42,10 +43,17 @@ function App() {
     }
   ];
 
+  const skateboardElements = skateboards.map(board => {
+    return (
+      <Skateboard {...board} />
+    )
+  })
+
   return (
     <>
       <Navbar name = {storeName} />
       <Store name={storeName} skateboards={skateboards}/>
+      {skateboardElements}
     </>
   )
 }
