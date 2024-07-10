@@ -12,7 +12,7 @@ function App() {
     {
       id: 1,
       name: "Street Cruiser",
-      size: "8.0",
+      size: ["8.0", "6.0"],
       style: "Street",
       design: "Classic Black",
       price: 75.99
@@ -20,7 +20,7 @@ function App() {
     {
       id: 2,
       name: "Pro Trickster",
-      size: "8.25",
+      size: ["8.25", "6.0"],
       style: "Park",
       design: "Flame Graphics",
       price: 89.99
@@ -28,7 +28,7 @@ function App() {
     {
       id: 3,
       name: "Vert Master",
-      size: "8.5",
+      size: ["8.5", "6.0"],
       style: "Vert",
       design: "Skull and Bones",
       price: 95.00
@@ -36,7 +36,7 @@ function App() {
     {
       id: 4,
       name: "Longboard Cruiser",
-      size: "9.0",
+      size: ["9.0", "6.0"],
       style: "Cruising",
       design: "Palm Trees",
       price: 120.49
@@ -45,7 +45,7 @@ function App() {
 
   const skateboardElements = skateboards.map(board => {
     return (
-      <Skateboard {...board} />
+      <Skateboard {...board} key={board.id}/>
     )
   })
 

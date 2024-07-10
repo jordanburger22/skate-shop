@@ -1,0 +1,7 @@
+How key Works
+
+Adding: When a new skateboard is added to the skateboards array, React will create a new Skateboard component for it without disturbing the existing components.
+
+Removing: When a skateboard is removed, React will remove the corresponding Skateboard component and leave the rest unchanged.
+
+Updating: When a skateboard's data changes, React will only update the Skateboard component with the corresponding key.
